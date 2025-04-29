@@ -1,0 +1,25 @@
+Problem Statement: Frog Jump with Minimum Cost
+A frog is trying to cross a line of stones. Each stone is at a certain height, represented by the array heights. The frog initially at the first stone and aims to reach the last stone with the minimum total cost.
+
+The cost to jump from one stone to another is the absolute difference in their heights. The frog can jump to:
+
+1. The next stone, or
+2. The next-to-next stone.
+Write a function minCost(heights) that returns the minimum total cost for the frog to reach the last stone.
+
+Example:
+Input:
+
+heights = [10, 30, 40, 20]
+Output:
+
+30
+Explanation:
+
+The frog jumps from the first stone (height 10) to the second stone (height 30), and then to the fourth stone (height 20).
+
+Jump costs:
+
+From 10 to 30: |30 - 10| = 20
+From 30 to 20: |30 - 20| = 10
+Total cost: 20 + 10 = 30.
