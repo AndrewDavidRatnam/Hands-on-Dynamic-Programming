@@ -8,7 +8,8 @@ def minCost(heights):
 
 heightss = [[10, 30, 40, 20],[10, 10],[30, 10, 60, 10, 60, 50] ]
 
-print(minCost(heights))
+for heights in heightss
+  print(minCost(heights))
 
 
 
