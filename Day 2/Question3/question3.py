@@ -21,7 +21,23 @@ def minOperations(n):
     #         MinOp += 2
         
     # return MinOp
+    min_op = [0]*(n+1)
+    if n == 1:
+        return 0
+    if n == 2 :
+        return 1 
+    min_op[1] = 0
 
+    for i in range(2,n+1):
+        min_op[i] = 1 + min_op[i-1]
+        
+        if i%2 ==0:
+            min_op[i] =  min(min_op[i], 1+min_op[i//2])
+        if i%3 ==0:
+            min_op[i] = min(min_op[i], 1+ min_op[i//3])
+        # print(min_op[:i+1])
+        # min_op[i] = 1 + min(min_op[i-1], if i%2 == 0 min_op[i//2], if i%3 == 0,min_op[i//3])
+    return min_op[-1] 
 
 
 n = int(input())
